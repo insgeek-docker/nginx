@@ -4,7 +4,7 @@
 ############################################################
 FROM centos:7.5.1804
 
-RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && rpm --import /etc/pki/rpm-gpg/RPM*
+RUN rpm --import /etc/pki/rpm-gpg/RPM*
 
 RUN yum -y update && yum install -y wget gcc gcc-c++ autoconf automake make openssl openssl-devel libxml2-devel libxslt-devel \
     perl-devel perl-ExtUtils-Embed libtool zlib zlib-devel pcre pcre-devel patch
